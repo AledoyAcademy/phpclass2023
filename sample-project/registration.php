@@ -60,14 +60,7 @@
 
 <body>
     <div class="container">
-        <?php include('header.php'); ?>
-        <h2>Registration Form</h2>
-        <form action="submit_registration.php" method="POST">
-            <?php if($error)
-            {
-                echo '<div style="color:red;">'.$error.'</div>';
-            }
-            ?>
+       
             <div class="form-group">
                 <p> First Name</p>
                 <input type="text" name="firstname" class="text" placeholder="enter first name">
@@ -90,9 +83,8 @@
                 <button type="submit">Register</button>
             </div>
         </form>
-        
-        <?php include('footer.php'); ?>
-    </div>
+   
+          </div>
 </body>
 
 </html>
