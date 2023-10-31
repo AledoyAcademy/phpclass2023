@@ -40,55 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			  <!-- header -->
         <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary">
-                    <h1>
-                        <a class="navbar-brand" href="index.html">
-                          <!-- Attainment     -->
-						  <img src="images/compass_logo (1).png" alt="" width="300px" >
-						</a>
-                    </h1>
-                    <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-lg-auto text-center">
-                            <li class="nav-item  mr-3">
-								<a style="color: black;" class="nav-link" href="index.html">Home
-                                    <!-- <span class="sr-only">(current)</span> -->
-                                </a>
-                            </li>
-                            <li class="nav-item  mr-3">
-                                <a class="nav-link" href="about.html">about</a>
-                            </li>
-							 <li class="nav-item  mr-3">
-                                <a class="nav-link" href="services.html">Services</a>
-                            </li>
-							<li class="nav-item  mr-3">
-                                <a class="nav-link" href="Project.html">Project</a>
-                            </li>
-							<li class="nav-item  mr-3">
-                                <a class="nav-link" href="Clients.html">Clients</a>
-                            </li>
-							<li class="nav-item  mr-3">
-                                <a class="nav-link" href="Careers.html">Careers</a>
-                            </li>
-                            <!-- <li class="nav-item active dropdown mr-3">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Pages
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="gallery.html">Gallery</a>
-									 <a class="dropdown-item" href="typo.html">Typography</a>
-                                </div>
-                            </li> -->
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="contact.html">contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+		<?php include('header.php'); ?>
         </header>
         <!-- //header -->
 		</div>
@@ -198,61 +150,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- Footer -->
 	<footer class="footer-section py-5">
-		<div class="container">
-			<div class="row">
-				
-				<div class="col-lg-4 footer-grids">
-					<h3>Get in touch</h3>
-					<p>0926k 4th block building,king Avenue, </p>
-					<p class="my-2"> New York City,USA</p>
-					<p class="phone">phone: +0444 555 6789</p>
-					<p class="phone my-2">Fax: +0444 555 6789</p>
-					<p class="phone">Mail:
-						<a href="mailto:info@example.com">info@example.com</a>
-					</p>
-				</div>
-				<div class="col-lg-4 footer-grids">
-					<h2>Latest News</h2>
-					<div class="d-flex justify-content-around">
-						<a href="#" class="col-4">
-							<img src="images/g1.jpg" class="img-fluid" alt="Responsive image">
-						</a>
-						<a href="#" class="col-4">
-							<img src="images/g2.jpg" class="img-fluid" alt="Responsive image">
-						</a>
-						<a href="#" class="col-4">
-							<img src="images/g3.jpg" class="img-fluid" alt="Responsive image">
-						</a>
-					</div>
-					<div class="d-flex justify-content-around">
-						<a href="#" class="col-4">
-							<img src="images/g4.jpg" class="img-fluid" alt="Responsive image">
-						</a>
-						<a href="#" class="col-4">
-							<img src="images/g5.jpg" class="img-fluid" alt="Responsive image">
-						</a>
-						<a href="#" class="col-4">
-							<img src="images/g6.jpg" class="img-fluid" alt="Responsive image">
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-4 footer-grids">
-					<h3>Twitter feed</h3>
-					<ul class="w3agile_footer_grid_list">
-						<li>Ut aut reiciendis voluptatibus adipiscing
-							<a href="#">example.com</a> alias, ut aut.
-							<span>
-								<i class="fab fa-twitter"></i> 02 days ago</span>
-						</li>
-						<li>Itaque earum rerum hic tenetur a sapiente
-							<a href="#">example.com</a> ut aut.
-							<span>
-								<i class="fab fa-twitter"></i> 03 days ago</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+	<?php include('footer.php'); ?>
 	</footer>
 	<!-- //Footer -->
 <!-- copyright -->

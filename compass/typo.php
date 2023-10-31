@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary">
                     <h1>
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="index.php">
                           <!-- Attainment     -->
 						  <img src="images/compass_logo (1).png" alt="" width="300px" >
                         </a>
@@ -52,15 +52,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-lg-auto text-center">
                             <li class="nav-item  mr-3">
-                                <a style="color: black;" class="nav-link" href="index.html">Home
+                                <a style="color: black;" class="nav-link" href="index.php">Home
                                     <!-- <span class="sr-only">(current)</span> -->
                                 </a>
                             </li>
                             <li class="nav-item  mr-3">
-                                <a class="nav-link" href="about.html">about</a>
+                                <a class="nav-link" href="about.php">about</a>
                             </li>
 							 <li class="nav-item  mr-3">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link" href="services.php">Services</a>
                             </li>
                             <li class="nav-item active dropdown mr-3">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -68,12 +68,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     Pages
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="gallery.html">Gallery</a>
-									 <a class="dropdown-item" href="typo.html">Typography</a>
+                                    <a class="dropdown-item" href="gallery.php">Gallery</a>
+									 <a class="dropdown-item" href="typo.php">Typography</a>
                                 </div>
                             </li>
                             <li class="nav-item mr-3">
-                                <a class="nav-link" href="contact.html">contact</a>
+                                <a class="nav-link" href="contact.php">contact</a>
                             </li>
                         </ul>
                     </div>
