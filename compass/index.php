@@ -2,7 +2,7 @@
 
 $file = fopen('visitors_count.txt',"r");
 $counter = fread($file,100);
-$counter = $counter+1;
+$counter+=1;
 fclose($file);
 
 $file = fopen('visitors_count.txt',"w");

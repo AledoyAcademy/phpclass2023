@@ -1,29 +1,20 @@
 <?php
-   function saymyname()
-   {
-        echo 'My name is Bisi';
-   }
+     function display_name($name,$age,$color)
+     {
+        echo '<h4>Who am I</h4>';
+        echo "My name is $name and i am $age years and I love color $color<br>";
+        echo '<hr>';
+     }
+
+     display_name('Bisi',12,'Green');
+     display_name('Bayo',21,'Navy Blue');
+     display_name('Sesan',22,'Blue');
+     display_name('Lu',32,'Yellow');
+     display_name('Daniel',28,'White');
+     display_name('Muyiwa',15,'Black');
 
 
-   function loopwork()
-   {
-    $name = array('Bisi', 'Bayo', 'Segun', 'Muyiwa', 'Tolani', 'Gbenga');
-
-$name[] = 'Gloria';
-$name[] = 'Bolu';
-$name[] = 'Lu';
-
-$total = count($name);
-// sort($name);
-
-for($i=0; $i<$total; $i++)
-{
-    echo 'My name is '.$name[$i].'<br>';
-}
-   }
 
 
-   loopwork();
-   saymyname();
-   
 ?>
+

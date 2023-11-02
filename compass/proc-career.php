@@ -7,6 +7,7 @@ $status = $_POST['status'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $confirm = $_POST['confirm'];
+$date = date('D jS M Y h:i:a');
 
 if(!$name || !$email || !$phone || !$username || !$password || !$confirm )
 {
@@ -31,7 +32,8 @@ $body = '---------------------'."\n"
         .'Message: '.$message."\n"
         .'Status: '.$status."\n"
         .'Username: '.$username."\n"
-        .'Password: '.$password."\n\n";
+        .'Password: '.$password."\n"
+        .'Date: '.$date."\n\n";
 
 
         $to = 'luabikoye@yahoo.com';

@@ -43,3 +43,39 @@ Status: Employed
 Username: bisi
 Password: bisiano
 
+---------------------
+Career information
+---------------------
+Fullname: Lu Abikouya
+Email: lumi@yahoo.com
+Phone: 9879879797
+Message: iugwrwe;rpf we;orlvwer
+Status: Employed
+Username: olu
+Password: olu
+Date: 02/11/2023
+
+---------------------
+Career information
+---------------------
+Fullname: Lu Abikouya
+Email: lumi@yahoo.com
+Phone: 9879879797
+Message: iugwrwe;rpf we;orlvwer
+Status: Employed
+Username: olu
+Password: olu
+Date: November 2nd Nov 2023
+
+---------------------
+Career information
+---------------------
+Fullname: Lu Abikouya
+Email: lumi@yahoo.com
+Phone: 9879879797
+Message: iugwrwe;rpf we;orlvwer
+Status: Employed
+Username: olu
+Password: olu
+Date: Thu 2nd Nov 2023 01:49:pm
+
