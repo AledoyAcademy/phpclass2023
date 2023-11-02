@@ -10,13 +10,15 @@ $confirm = $_POST['confirm'];
 
 if(!$name || !$email || !$phone || !$username || !$password || !$confirm )
 {
-    echo 'All information on this page is required - <a href="careers.php">Go back</a>';
+    $error_msg1 = 'All information is required';
+    include('Careers.php');
     exit;
 }
 
 if($password != $confirm)
 {
-    echo 'Password and confirmation are not the same - <a href="careers.php">Go back</a>';
+    $error_msg2 = 'Password and confirmation are not the same ';
+    include('Careers.php');
     exit;
 }
 
@@ -37,7 +39,8 @@ $body = 'Career information'."\n"
         
         mail($to,$subject,$body,$from);
 
-        include('index.php');
+        $correct = 'Thank you '.$name.' for submitting your details';
+        include('Careers.php');
         exit;
     
 

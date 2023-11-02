@@ -72,6 +72,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="contact-top1"  >
 			<!-- <h6 class="text-dark mb-4 text-capitalize"></h6> -->
 			<form action="proc-career.php" method="post" class="f-color">
+			<?php
+			if($error_msg1)
+			{
+				echo '<div class="alert alert-danger">'.$error_msg1.'</div>';
+			}
+			
+			if($error_msg2)
+			{
+				echo '<div class="alert alert-danger">'.$error_msg2.'</div>';
+			}
+
+			if($correct)
+			{
+				echo '<div class="alert alert-success">'.$correct.'</div>';
+			}
+			?>
+		
 				<div class="form-group">
 					<label for="contactusername">Name</label>
 					<input  type="text" class="form-control" placeholder="Your Name" id="contactusername" name="name">
