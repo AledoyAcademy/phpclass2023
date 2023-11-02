@@ -22,7 +22,8 @@ if($password != $confirm)
     exit;
 }
 
-$body = 'Career information'."\n"
+$body = '---------------------'."\n"
+         .'Career information'."\n"
         .'---------------------'."\n"
         .'Fullname: '.$name."\n"
         .'Email: '.$email."\n"
@@ -30,13 +31,19 @@ $body = 'Career information'."\n"
         .'Message: '.$message."\n"
         .'Status: '.$status."\n"
         .'Username: '.$username."\n"
-        .'Password: '.$password."\n";
+        .'Password: '.$password."\n\n";
 
 
         $to = 'luabikoye@yahoo.com';
         $subject = 'Career form from Compass';
         // $from = "From: norepy@aledoy.com";
         
+
+           $file = fopen("career_data.txt","a");
+           fwrite($file,$body);
+           fclose($file);
+
+
         mail($to,$subject,$body,$from);
 
         $correct = 'Thank you '.$name.' for submitting your details';

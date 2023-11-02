@@ -45,6 +45,9 @@
                             <li class="nav-item mr-3">
                                 <a class="nav-link" href="contact.php">contact</a>
                             </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Vs: <?php include('visitors_count.txt'); ?></a>
+                            </li>
                         </ul>
                     </div>
 				 </nav>

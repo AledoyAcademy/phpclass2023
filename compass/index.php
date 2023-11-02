@@ -1,3 +1,18 @@
+<?php
+
+$file = fopen('visitors_count.txt',"r");
+$counter = fread($file,100);
+$counter = $counter+1;
+fclose($file);
+
+$file = fopen('visitors_count.txt',"w");
+fwrite($file,$counter);
+fclose($file);
+
+
+
+?>
+
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
