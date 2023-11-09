@@ -55,12 +55,38 @@
         .form-group button:hover {
             background-color: yellow;
         }
+
+        .alert{
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius:5px;
+        }
+        .alert-danger{
+            
+            background-color: pink;
+            color:red;
+        }
+        .alert-success{
+            
+            background-color: green;
+            color:#ccc;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-       
+       <form action = "proc-registration.php" method="post">
+        <?php if($error) {
+            ?>
+        <div class="alert alert-danger"> <?php echo $error; ?> </div>
+        <?php } ?>
+        <?php if($success) {
+            ?>
+        <div class="alert alert-success"> <?php echo $success; ?> </div>
+        <?php } ?>
+        
+
             <div class="form-group">
                 <p> First Name</p>
                 <input type="text" name="firstname" class="text" placeholder="enter first name">
