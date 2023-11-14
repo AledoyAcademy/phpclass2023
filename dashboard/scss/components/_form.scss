@@ -1,0 +1,77 @@
+.main-form {
+  display: flex;
+
+  gap: 3.2rem;
+  margin-inline: 6%;
+  // margin-block: 5%;
+  width: 100%;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+
+    flex: 1;
+
+    @include respond(tab-land) {
+      order: -1;
+    }
+
+    &-action {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 2.4rem;
+    }
+
+    &-terms {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    &-fieldset {
+      border: none;
+      outline: none;
+    }
+
+    &-label {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    &-radio {
+      margin-right: 5px;
+    }
+
+    &-input {
+      border-radius: var(--radius);
+      border: 1px solid;
+      outline: none;
+      height: 5rem;
+      width: 100%;
+      padding-inline: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+}

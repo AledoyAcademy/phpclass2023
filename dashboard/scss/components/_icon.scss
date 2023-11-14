@@ -1,0 +1,21 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  &-small {
+    // fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+  }
+  &-xsmall {
+    // fill: currentColor;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+.edit-icon {
+  margin-left: 2rem;
+}

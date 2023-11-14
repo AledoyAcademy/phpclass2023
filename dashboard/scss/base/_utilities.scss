@@ -1,0 +1,30 @@
+.body__center {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-height: 56.25em) {
+    height: 100vh;
+  }
+  @media screen and (max-height: 56.25em) {
+    padding-block: 4rem;
+  }
+}
+.body__color {
+  background-color: var(--tertiary-color);
+}
+.flex-start {
+  justify-content: start !important;
+}
+.label-inline {
+  display: inline !important;
+}
+.m-r-small {
+  margin-right: 1.5rem;
+}
+
+.m-b-none {
+  margin-bottom: 0 !important;
+}
+.sidebar2 {
+  height: 100vh !important;
+}

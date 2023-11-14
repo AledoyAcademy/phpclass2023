@@ -1,0 +1,14 @@
+.action__call {
+  display: flex;
+  justify-content: end;
+  font-size: 1.4rem;
+}
+.action__link {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-left: 0.4rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

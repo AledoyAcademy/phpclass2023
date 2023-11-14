@@ -1,0 +1,29 @@
+.header {
+  background-color: var(--primary-color-light);
+  flex-basis: 5.5rem;
+  box-shadow: var(--shadow);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 6%;
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__form-search {
+    background: transparent;
+    border: none;
+    margin-right: 1rem;
+  }
+
+  &__form-input {
+    // background: transparent;
+    border: none;
+    outline: none;
+
+    // font-size:;
+  }
+}
