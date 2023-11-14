@@ -25,13 +25,15 @@
         />
       </div>
       <!-- form -->
-      <form action="proc-login.php" method="post" class="main-form__form">
+      <form action="proc-reset.php" method="post" class="main-form__form">
         <!-- form heading -->
         <?php if($error) { ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
         <?php } ?>
-        
-        <div class="heading"><h1 class="heading__header">Login</h1></div>
+        <?php if($success) { ?>
+        <div class="alert alert-success"><?php echo $success; ?></div>
+        <?php } ?>
+        <div class="heading"><h1 class="heading__header">Reset Password</h1></div>
         <!-- form fields -->
         <div class="main-form__form-fields">
        
@@ -46,34 +48,20 @@
               id="email"
             />
           </fieldset>
-          <fieldset class="main-form__form-fieldset">
-            <label for="password" class="main-form__form-label">Password</label>
-            <input
-              type="password"
-              class="main-form__form-input"
-              name="password"
-              id="password"
-            />
-          </fieldset>
           <!-- action section -->
-          <div class="action__call">
-            Forgot Password?
-            <a href="reset-password.php" class="action__link"
-              >Reset</a
-            >
-          </div>
+       
         </div>
 
         <div class="main-form__form-action">
           <!-- button container -->
           <div class="btn__container">
-            <button type="submit" class="btn btn--dark">Login</button>
+            <button type="submit" class="btn btn--dark">Reset</button>
           </div>
           <!-- action section -->
           <div class="action__call flex-start">
-            Don’t have an Account?
-            <a href="registration.php" class="action__link"
-              >Register</a
+   
+            <a href="index.php" class="action__link"
+              >Go back to login</a
             >
           </div>
         </div>

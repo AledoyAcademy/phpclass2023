@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(!$_SESSION['valid_user'])
+{
+   $error = 'You are not logged in';
+   include('index.php');
+   exit;
+}
+include('connect.php');
+require_once('fns.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,7 +66,7 @@
             </a>
           </li>
           <li class="sidebar__nav-item">
-            <a href="#" class="sidebar__nav-link">
+            <a href="logout.php" class="sidebar__nav-link">
               <svg class="icon icon-xsmall">
                 <use xlink:href="img/sprite.svg#icon-logout_icon"></use>
               </svg> 
