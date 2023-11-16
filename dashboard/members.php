@@ -50,7 +50,7 @@ require_once('fns.php');
             </a>
           </li>
           <li class="sidebar__nav-item">
-            <a href="#" class="sidebar__nav-link">
+            <a href="admin.php" class="sidebar__nav-link">
               <svg class="icon icon-xsmall">
                 <use xlink:href="img/sprite.svg#icon-admin_icon"></use>
               </svg> 
@@ -89,107 +89,58 @@ require_once('fns.php');
 
           <div class="profile">
             <div class="profile__box"><img src="img/profile.png" alt="Profile Photo"></div>
-            <span>Hello Ifeanyi!</span>
+            <span>Hello <?php echo get_userid($_SESSION['valid_user']); ?>!</span>
           </div>
         </header>
         <div class="content__body">
           <div class="content__container">
 
-            <!-- <table>
+            <table style="border-width:1px; border-style:solid;">
               <thead>
                   <tr>
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone</th>
-                      <th>Date</th>
+                      <th>Gender</th>
+                      <?php if($_SESSION['privilege'] == 'admin')
+                      {
+                        ?>
+                      <th>Action</th>
+                      <?php } ?>
                   </tr>
               </thead>
               <tbody>
+<?php
+$query = "select * from registration";
+$result = mysqli_query($conn,$query);
+$num_record = mysqli_num_rows($result);
+for($i=0; $i<$num_record; $i++)
+{
+$row = mysqli_fetch_array($result);
+
+?>
                 <tr>
-                    <td><span class="span_border"><input type="checkbox" class="checkbox-icon"></span>John Doe</td>
-                    <td>john.doe@example.com</td>
-                    <td>123-456-7890</td>
-                    <td>2023-11-11 
-                      <svg class="icon icon-xsmall edit-icon">
-                        <use xlink:href="img/sprite.svg#icon-edit_icon"></use>
-                      </svg>
-                    </td>
+                    <td><?php echo $row['firstname'].' '.$row['lastname']; ?> </td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['phone']; ?></td>
+                    <td><?php echo $row['gender']; ?>
+                      </td>
+
+                      <?php if($_SESSION['privilege'] == 'admin')
+                      {
+                        ?>
+                      <td>
+                      <button>Delete</button>
+                      <button>Make Admin</button>
+                      </td>
+                      <?php } ?>
+                    
                 </tr>
-                <tr>
-                    <td><span class="span_border"><input type="checkbox" class="checkbox-icon"></span>John Doe</td>
-                    <td>john.doe@example.com</td>
-                    <td>123-456-7890</td>
-                    <td>2023-11-11 
-                      <svg class="icon icon-xsmall edit-icon">
-                        <use xlink:href="img/sprite.svg#icon-edit_icon"></use>
-                      </svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="span_border"><input type="checkbox" class="checkbox-icon"></span>John Doe</td>
-                    <td>john.doe@example.com</td>
-                    <td>123-456-7890</td>
-                    <td>2023-11-11 
-                      <svg class="icon icon-xsmall edit-icon">
-                        <use xlink:href="img/sprite.svg#icon-edit_icon"></use>
-                      </svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="span_border"><input type="checkbox" class="checkbox-icon"></span>John Doe</td>
-                    <td>john.doe@example.com</td>
-                    <td>123-456-7890</td>
-                    <td>2023-11-11 
-                      <svg class="icon icon-xsmall edit-icon">
-                        <use xlink:href="img/sprite.svg#icon-edit_icon"></use>
-                      </svg>
-                    </td>
-                </tr>
+               <?php } ?>
               </tbody>
-          </table> -->
+          </table>
 
-            
-
-            <div class="table">
-              <div class="table__col">
-                <div class="table__title">Name</div>
-                <div class="table__item"><span><input type="checkbox"></span><span>Ayo Johnson</span></div>
-                <div class="table__item"><span><input type="checkbox"></span><span>Ayo Johnson</span></div>
-                <div class="table__item"><span><input type="checkbox"></span><span>Ayo Johnson</span></div>
-                <div class="table__item"><span><input type="checkbox"></span><span>Ayo Johnson</span></div>
-              </div>
-              <div class="table__col">
-                <div class="table__title">Email</div>
-                <div class="table__item"><span>Ayojohnson@gmail.com</span></div>
-                <div class="table__item"><span>Ayojohnson@gmail.com</span></div>
-                <div class="table__item"><span>Ayojohnson@gmail.com</span></div>
-                <div class="table__item"><span>Ayojohnson@gmail.com</span></div>
-              </div>
-              <div class="table__col">
-                <div class="table__title">Phone</div>
-                <div class="table__item"><span>Phone</span></div>
-                <div class="table__item"><span>Phone</span></div>
-                <div class="table__item"><span>Phone</span></div>
-                <div class="table__item"><span>Phone</span></div>
-              </div>
-              <div class="table__col">
-                <div class="table__title">Date</div>
-                <div class="table__item"><span>Date</span>
-                  <!-- <span><svg icon icon-xsmall><use xlink:href="img/sprite.svg#icon-edit_icon"></use></svg></span> -->
-                </div>
-                <div class="table__item"><span>Date</span>
-                  <!-- <span><svg icon icon-xsmall><use xlink:href="img/sprite.svg#icon-edit_icon"></use></svg></span> -->
-                </div>
-                <div class="table__item"><span>Date</span>
-                  <!-- <span><svg icon icon-xsmall><use xlink:href="img/sprite.svg#icon-edit_icon"></use></svg></span> -->
-                </div>
-                <div class="table__item"><span>Date</span>
-                  <!-- <span><svg icon icon-xsmall><use xlink:href="img/sprite.svg#icon-edit_icon"></use></svg></span> -->
-                </div>
-              </div>
-            </div>
-            
-          </div>
+         
         </div>
       <main>
     </div>

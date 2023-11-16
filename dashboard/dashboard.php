@@ -49,7 +49,7 @@ require_once('fns.php');
             </a>
           </li>
           <li class="sidebar__nav-item">
-            <a href="#" class="sidebar__nav-link">
+            <a href="admin.php" class="sidebar__nav-link">
               <svg class="icon icon-xsmall">
                 <use xlink:href="img/sprite.svg#icon-admin_icon"></use>
               </svg> 
@@ -88,7 +88,7 @@ require_once('fns.php');
 
           <div class="profile">
             <div class="profile__box"><img src="img/profile.png" alt="Profile Photo"></div>
-            <span>Hello Ifeanyi!</span>
+            <span>Hello <?php echo get_userid($_SESSION['valid_user']); ?>!</span>
           </div>
         </header>
         <div class="content__body">

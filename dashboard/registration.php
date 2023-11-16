@@ -63,6 +63,16 @@
             />
           </fieldset>
           <fieldset class="main-form__form-fieldset">
+            <label for="username" class="main-form__form-label">Username</label>
+            <input
+              type="text"
+              class="main-form__form-input"
+              name="username"
+              id="username"
+              value="<?php echo $username; ?>"
+            />
+          </fieldset>
+          <fieldset class="main-form__form-fieldset">
             <label for="password" class="main-form__form-label">Password</label>
             <input
               type="password"

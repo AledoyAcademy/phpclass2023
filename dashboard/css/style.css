@@ -14,3 +14,7 @@
     background-color:red;
     color: #fff;
 }
+
+table td{
+    padding: 15px;
+}
