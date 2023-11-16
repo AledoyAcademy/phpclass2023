@@ -102,11 +102,7 @@ require_once('fns.php');
                       <th>Email</th>
                       <th>Phone</th>
                       <th>Gender</th>
-                      <?php if($_SESSION['privilege'] == 'admin')
-                      {
-                        ?>
                       <th>Action</th>
-                      <?php } ?>
                   </tr>
               </thead>
               <tbody>
@@ -125,15 +121,10 @@ $row = mysqli_fetch_array($result);
                     <td><?php echo $row['phone']; ?></td>
                     <td><?php echo $row['gender']; ?>
                       </td>
-
-                      <?php if($_SESSION['privilege'] == 'admin')
-                      {
-                        ?>
                       <td>
                       <button>Delete</button>
                       <button>Make Admin</button>
                       </td>
-                      <?php } ?>
                     
                 </tr>
                <?php } ?>

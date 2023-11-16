@@ -29,18 +29,6 @@ if($num_records > 0)
     $_SESSION['privilege'] = $row['usertype'];
 
 
-    //code to send email to user
-    $msg = 'Hello '.get_userid($email).',<br><br>
-    A login has been detected on your account @ '.date('d-m-Y h:i:s').' with the IP address '.$_SERVER['REMOTE_ADDR'].'<br>';
-
-    $headers = "From: noreply@ecardnaija.com";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; xcharset=UTF-8\r\n";
-
-
-    mail($email,'User Logged in detected', $msg, $headers);
-
-
     include('dashboard.php');
     exit;
 }
