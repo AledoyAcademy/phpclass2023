@@ -49,11 +49,20 @@ require_once('fns.php');
             </a>
           </li>
           <li class="sidebar__nav-item active">
-            <a href="admin.php" class="sidebar__nav-link">
+            <a href="category.php" class="sidebar__nav-link">
               <svg class="icon icon-xsmall">
                 <use xlink:href="img/sprite.svg#icon-admin_icon"></use>
               </svg> 
-              <span>Admin</span>
+              <span>Blog Category</span>
+            </a>
+          </li>
+
+<li class="sidebar__nav-item">
+            <a href="post.php" class="sidebar__nav-link">
+              <svg class="icon icon-xsmall">
+                <use xlink:href="img/sprite.svg#icon-admin_icon"></use>
+              </svg> 
+              <span>Blog Posts</span>
             </a>
           </li>
           <li class="sidebar__nav-item">
@@ -99,7 +108,53 @@ require_once('fns.php');
 
           You can do all admin stuff here
 
-         
+         <br><br>
+
+         <table style="border-width:1px; border-style:solid;">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Gender</th>
+                      <?php if($_SESSION['privilege'] == 'admin')
+                      {
+                        ?>
+                      <th>Action</th>
+                      <?php } ?>
+                  </tr>
+              </thead>
+              <tbody>
+<?php
+$query = "select * from registration";
+$result = mysqli_query($conn,$query);
+$num_record = mysqli_num_rows($result);
+for($i=0; $i<$num_record; $i++)
+{
+$row = mysqli_fetch_array($result);
+
+?>
+                <tr>
+                    <td><?php echo $row['firstname'].' '.$row['lastname']; ?> </td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['phone']; ?></td>
+                    <td><?php echo $row['gender']; ?>
+                      </td>
+
+                      <?php if($_SESSION['privilege'] == 'admin')
+                      {
+                        ?>
+                      <td>
+                      <a href="delete-user.php?id=<?php echo $row['id']; ?>&privilege=<?php echo $row['usertype']; ?>" onclick="return confirm('Are you sure you want to delete <?php echo $row['firstname']; ?>?');"><button>Delete</button></a>
+
+                     <a href="make-category.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure?');"> <button>Make Admin</button> </a>
+                      </td>
+                      <?php } ?>
+                    
+                </tr>
+               <?php } ?>
+              </tbody>
+          </table>
         </div>
       <main>
     </div>

@@ -62,7 +62,7 @@ $result_up = mysqli_query($conn,$query_up);
 
 }
 else{
-    $error = 'This email is not in our database';
+    $error = 'You have entered a wrong password';
     include('change-password.php');
     exit;
 }
