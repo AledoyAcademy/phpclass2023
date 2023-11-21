@@ -48,12 +48,30 @@ require_once('fns.php');
               <span>Members</span>
             </a>
           </li>
+
           <li class="sidebar__nav-item">
             <a href="admin.php" class="sidebar__nav-link">
               <svg class="icon icon-xsmall">
-                <use xlink:href="img/sprite.svg#icon-admin_icon"></use>
+                <use xlink:href="img/sprite.svg#icon-member_icon"></use>
               </svg> 
               <span>Admin</span>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="category.php" class="sidebar__nav-link">
+              <svg class="icon icon-xsmall">
+                <use xlink:href="img/sprite.svg#icon-admin_icon"></use>
+              </svg> 
+              <span>Blog Category</span>
+            </a>
+          </li>
+
+<li class="sidebar__nav-item">
+            <a href="post.php" class="sidebar__nav-link">
+              <svg class="icon icon-xsmall">
+                <use xlink:href="img/sprite.svg#icon-admin_icon"></use>
+              </svg> 
+              <span>Blog Posts</span>
             </a>
           </li>
           <li class="sidebar__nav-item active">
